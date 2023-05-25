@@ -50,6 +50,11 @@
     font-size: 12px;
     font-weight: 300;
   }
+  
+  .nav-links a {
+    position: relative;
+    z-index: 10;
+  }
 
   .hero-1 {
     height: 100vh; /* Set the height of hero-1 section */

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+    <link rel="stylesheet" href="./css/services.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navcontainer">
+        <div class="nav">
+          <div class="nav-logo"><a href = "./index.html"><img src="./images/Falcon3dlogo.png" alt="falconlogo"></a></div>
+          <div class="nav-links">
+            <a href="./team.html">Team</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./services.html">Services</a>
+            <a href="./contact.html">Contact Us</a>
+          </div>
+        </div>
+      <div>
+    </header>
+    <section>
+    <div class="container">
+      <a class="text" href="#">Custom Printers</a>
+      <a class="text" href="#">3D Printing</a>
+      <a class="text" href="#">Prototyping</a>
+      <a class="text" href="#">Consuting</a>
+      <a class="text" href="#">Spares/Accessories</a>
+    </div>
+  </section>
+    <script>
+      let elements = document.querySelectorAll(".text");
+
+      elements.forEach((element) => {
+        let innerText = element.innerText;
+        element.innerHTML = "";
+
+        let textContainer = document.createElement("div");
+        textContainer.classList.add("block");
+
+        for (let letter of innerText) {
+          let span = document.createElement("span");
+          span.innerText = letter.trim() === "" ? "\xa0" : letter;
+          span.classList.add("letter");
+          textContainer.appendChild(span);
+        }
+
+        element.appendChild(textContainer);
+        element.appendChild(textContainer.cloneNode(true));
+      });
+
+      elements.forEach((element) => {
+        element.addEventListener("mouseover", () => {
+          element.classList.remove("play");
+        });
+      });
+    </script>
+  </body>
+</html>
