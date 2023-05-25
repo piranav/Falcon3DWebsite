@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Falcon 3D, 3D Printing with Force.</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <div class="nav-logo"><a href="./index.html"><img src="./images/Falcon3dlogo.png" alt="falconlogo"></a></div>
+        <div class="nav-links">
+          <a href="./team.html">Team</a>
+          <a href="./projects.html">Projects</a>
+          <a href="./services.html">Services</a>
+          <a href="./contact.html">Contact Us</a>
+        </div>
+      </div>
+      <div class="header">
+        <div class="header-left col">
+          <div class="item">
+            <h1>Printing,</h1>
+            <h1>with force.</h1>
+          </div>
+        </div>
+        <div class="header-right col">
+          <div class="play-wrapper">
+            <div class="play-btn">
+              <ion-icon name="play-sharp"></ion-icon>
+            </div>
+          </div>
+          <div class="pattern">✦ ✦ ✦</div>
+          <div class="copy">
+            <p>
+              Falcon 3D, takes inspiration from the Star Wars universe as it soars into the world of 3D printing. 
+              Specializing in building customized 3D printers, they offer a galaxy of services, including 3D printing solutions, consulting, and prototyping, making their mark on the future of manufacturing with a touch of sci-fi flair.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="btn-container">
+        <div class="btns col">
+          <div class="btn">
+            <ion-icon name="analytics"></ion-icon>
+            <span>Fast prototyping</span>
+          </div>
+          <div class="btn">
+            <ion-icon name="glasses"></ion-icon>
+            <span>Quality Products</span>
+          </div>
+        </div>
+        <div class="divider col">
+          <div class="hr"></div>
+        </div>
+      </div>
+      <div class="hero">
+        <img
+          src="./images/product1.jpg"
+          alt=""
+        />
+        <div class="hero-wrapper"></div>
+        <div class="arrow">
+          <ion-icon name="arrow-forward-sharp"></ion-icon>
+        </div>
+      </div>
+      <div class="marquee">
+        <span>
+          custom 3d printers - 3d printing services - 3d printing consulting - accessories
+        </span>
+      </div>
+    </div>
+    <script>
+      gsap.from(".nav-logo, .nav-links > a", 2, {
+        top: "30px",
+        opacity: 0,
+        ease: "power4.inOut",
+        delay: 1,
+        stagger: {
+          amount: 0.3,
+        },
+      });
+      gsap.from("h1", 2, {
+        y: 50,
+        opacity: 0,
+        ease: "power4.inOut",
+        delay: 1.5,
+        stagger: {
+          amount: 0.3,
+        },
+      });
+      gsap.from(".play-wrapper, .pattern, .copy", 2, {
+        scaleY: 0,
+        ease: "power3.inOut",
+        stagger: {
+          amount: 0.3,
+        },
+        delay: 2.5,
+      });
+
+      gsap.from(".hr", 2, {
+        width: "0%",
+        ease: "power3.inOut",
+        delay: 3,
+      });
+
+      gsap.from(".btns", 2, {
+        x: 50,
+        opacity: 0,
+        ease: "power3.inOut",
+        delay: 3,
+      });
+
+      gsap.from(".play-btn", 2, {
+        scale: 0,
+        ease: "power3.inOut",
+        delay: 3,
+      });
+      gsap.from(".hero-wrapper", 2, {
+        width: "100%",
+        ease: "power3.inOut",
+        delay: 3,
+      });
+      gsap.from(".arrow", 2, {
+        scale: 0,
+        ease: "power3.inOut",
+        delay: 3,
+      });
+      gsap.from(".marquee", 2, {
+        bottom: "-10rem",
+        ease: "power3.inOut",
+        delay: 4,
+      });
+    </script>
+  </body>
+</html>
