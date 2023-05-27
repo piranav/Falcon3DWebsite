@@ -1,0 +1,277 @@
+  @import url('https://fonts.cdnfonts.com/css/monument-extended');
+
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;1,300&display=swap');
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {  
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    background: #111111;
+  }
+
+
+  .nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 1em 2em 2em;
+    font-family: "Monument Extended";
+    align-items: center;
+  }
+
+  .nav-logo{
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-logo img {
+    height: 100px; /* Make the image fill the height of the nav-links */
+    width: auto; /* Preserve the aspect ratio of the image */
+    max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+  }
+
+
+  .nav > * {
+    position: relative;
+  }
+
+  .nav a {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fffefe;
+    padding: 0 1em;
+    font-size: 12px;
+    font-weight: 300;
+  }
+  
+  .nav-links a {
+    position: relative;
+    z-index: 10;
+  }
+
+  .hero-1 {
+    height: 100vh; /* Set the height of hero-1 section */
+    overflow-y: scroll; /* Enable vertical scrolling within hero-1 section */
+  }
+
+  .hero-2 {
+    height: 100vh; /* Set the height of hero-2 section */
+    overflow-y: scroll; /* Enable vertical scrolling within hero-2 section */
+  }
+  
+  .site-menu {
+    display: flex;
+  }
+
+  .menu-item {
+    margin-left: 60px;
+  }
+
+  .container {
+    position: absolute;
+    top: 120vh;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.2);
+    width: 90vw;
+    z-index: 2;
+    animation: bounce 5s infinite ease-in-out;
+    animation-delay: 5s;
+  }
+
+  @keyframes bounce {
+    0% {
+      top: 25vh;
+    }
+    50% {
+      top: 30vh;
+    }
+    100% {
+      top: 25vh;
+    }
+  }
+
+  .hero-img img {
+    padding-left: 500px;
+    padding-top: 450px;
+    width: 60%;
+    height: auto;
+  }
+
+  .title {
+    margin-top: 100px;
+    text-align: center;
+    font-family: "Monument Extended";
+    font-size: 7vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff;
+    overflow: hidden;
+  }
+
+  .title .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+  .prev-imgs {
+    position: relative;
+    bottom: -6em;
+    right: -1030px;
+    display: flex;
+  }
+
+  .prev-img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 10px;
+  }
+
+  .prev-1 {
+    background: url("./images/prev-1.png") no-repeat 50% 50%;
+    background-size: cover;
+  }
+
+  .prev-2 {
+    background: url("./images/prev-2.png") no-repeat 50% 50%;
+    background-size: cover;
+  }
+
+  .prev-3 {
+    background: url("./images/prev-3.png") no-repeat 50% 50%;
+    background-size: cover;
+  }
+
+  .buy-now-cta {
+    position: relative;
+    bottom: -12em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .buy-now-cta button {
+    background: rgb(28, 28, 28);
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 4px;
+    font-family: "Nunito Sans";
+    text-transform: uppercase;
+    padding: 20px 40px;
+    font-size: 12px;
+  }
+
+  .info {
+    position: relative;
+    bottom: -18em;
+    left: 40px;
+    width: 400px;
+  }
+
+  .info p {
+    color: #5e5e5e;
+    text-decoration: none;
+    font-family: "Nunito Sans";
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .marquee {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.4em 0;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 3;
+    background: #000;
+    display: flex;
+    align-items: center;
+  }
+  .marquee span {
+    font-family: "Monument Extended";
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    mix-blend-mode: normal !important;
+    font-size: 2em;
+    text-transform: uppercase;
+    padding-left: -10%;
+    animation: marquee-animation 80s linear infinite;
+  }
+
+
+  @keyframes marquee-animation {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+
+
+  .slider {
+    width: 100%;
+    cursor: grab;
+  }
+
+  .slider-wrapper {
+    white-space: nowrap;
+  }
+
+  .slider-item {
+    display: inline-block;
+    width: 40vw;
+    padding: 3vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slider-item figure {
+    position: fixed;
+    padding-bottom: 50%;
+    overflow: hidden;
+  }
+
+  .slider-item figure img {
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    
+  }
+
+  .slider-progress {
+    position: relative;
+    bottom: -30em;
+    left: 35em;
+    width: 20vw;
+    height: 2px;
+    margin: 2em;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .slider-progress-bar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    transform: scaleX(0);
+    transform-origin: 0% 0%;
+  }
+
